@@ -1,0 +1,61 @@
+/* Multiple Components */
+
+body {
+  background-image: url("./images/billy-huynh-v9bnfMCyKbg-unsplash.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+img {
+  width: 75px;
+  height: 50px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+/* Navbar */
+.navbar {
+  margin-bottom: 5%;
+}
+
+.navbar .toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Five Day and Favorites */
+
+.forecastContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.weatherContainers {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  text-align: center;
+}
+
+/* Current */
+.current {
+  background-color: #fff;
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+
