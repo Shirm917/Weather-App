@@ -8,7 +8,6 @@ import { faHeart as faHeartUnfilled} from '@fortawesome/free-regular-svg-icons';
 const AddRemoveFavorites = () => {
     const {cityKey,currentCityName,currentCity} = useContext(AppContext);
     const [favorites,setFavorites] = useState(JSON.parse(localStorage.getItem("favorites")) || []);
-    const favoritesStorage = JSON.parse(localStorage.getItem("favorites"));
 
     const addToFavorites = () => {
         favorites.push({id: cityKey, currentCityName, currentCity})
@@ -27,7 +26,7 @@ const AddRemoveFavorites = () => {
     
     return (
         <div>
-            <i>{favoritesStorage.find(city => city.id === cityKey) ? <FontAwesomeIcon icon={faHeart} /> : <FontAwesomeIcon icon={faHeartUnfilled} />}</i>
+            <i>{favorites.find(city => city.id === cityKey) ? <FontAwesomeIcon icon={faHeart} /> : <FontAwesomeIcon icon={faHeartUnfilled} />}</i>
             <button onClick={addToFavorites}>Add to favorites</button>
             <button onClick={removeFromFavorites}>Remove from favorites</button>
         </div>
